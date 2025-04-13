@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chord Blocks - コード譜作成</title>
+    <meta name="description" content="Chord Blocksは、簡単にコード譜を作成・編集・保存できるウェブアプリです。">
+    <meta name="keywords" content="コード譜, コード譜作成, コード譜エディタ, コード譜エディタ, 楽譜, エディタ, ツール">
+    <meta name="author" content="te07n09">
+    <meta property="og:title" content="Chord Blocks - コード譜作成ツール">
+    <meta property="og:description" content="Chord Blocksは、簡単にコード譜を作成・編集・保存できるウェブアプリです。">
+    <meta property="og:url" content="https://te07n09.github.io/Chord-Blocks/">
+    <link rel="stylesheet" href="css/stylesheet.css">
+</head>
+<body>
+    <img id="logo" src="res/Chord-Blocks_logo.png">
+    <header>
+        <div class="annotation-container">
+            <p class="annotation">"編集"ボタンを押して作成を始めます</p>
+            <p class="annotation">変化記号は"#"のみ対応しています</p>
+            <p class="annotation">編集モードがオフの状態でコード譜をクリックまたはスペースキーを押すと自動スクロールします</p>
+        </div>
+        <div class="header-menu">
+            <button id="load-json" class="header-button">読み込み</button>
+            <input id="json-input" type="file" accept=".json">
+            <button id="save-json" class="header-button">保存</button>
+            <button id="toggle-edit" class="header-button">編集</button>
+            <div class="select-container header-button">
+                <button id="spead-select" class="header-button">スクロール速度:5</button>
+                <div id="spead-option-container" class="option-container">
+                    <button class="spead-option header-button">1</button>
+                    <button class="spead-option header-button">2</button>
+                    <button class="spead-option header-button">3</button>
+                    <button class="spead-option header-button">4</button>
+                    <button class="spead-option header-button">5</button>
+                    <button class="spead-option header-button">6</button>
+                    <button class="spead-option header-button">7</button>
+                    <button class="spead-option header-button">8</button>
+                    <button class="spead-option header-button">9</button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div id="main-container" class=""></div>
+    <div id="hidden-container"></div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

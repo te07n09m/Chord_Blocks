@@ -1,0 +1,205 @@
+html {
+    font-family:Arial, Helvetica, sans-serif;
+    background-color: #f3f3f3;
+    color: #1f1f1f;
+}
+
+header {
+    margin: 1em;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+#logo {
+    height: 1.5em;
+    width: auto;
+    margin: 1em;
+}
+
+#main-container {
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    padding: 1em;
+    border-radius: 2em;
+}
+
+#hidden-container {
+    visibility: hidden;
+    position: relative;
+}
+
+#json-input, #select-spead {
+    display: none;
+}
+
+button.only-edit, input.only-edit::placeholder {
+    visibility: hidden;
+}
+button.only-edit.is-on, input.only-edit.is-on::placeholder {
+    visibility: visible;
+}
+input.only-edit {
+    pointer-events: none;
+    border: none;
+}
+input.only-edit.is-on {
+    pointer-events: all;
+    background-color: #ffffea;
+}
+label.only-edit {
+    pointer-events: none;
+}
+label.only-edit.is-on {
+    pointer-events: all;
+}
+
+input.only-edit, .hidden-span {
+    padding: 0.2em;
+}
+
+.annotation {
+    font-size: 0.8em;
+    margin-top: 0.2em;
+    margin-bottom: 0.2em;
+    color: #5f5f5f;
+}
+
+.header-menu {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.2em;
+}
+
+.title, .key-capo-container {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+.title {
+    font-size: 1.2em;
+}
+.key-capo-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+
+.key-container, .capo-container {
+    display: flex;
+}
+
+.chord, .lyric, .key, .key-label, .capo, .capo-label {
+    font-size: 1em;
+}
+input.key, input.capo {
+    font-size: 1em;
+    width: 3em;
+}
+
+.chord {
+    color: #ff1f1f;
+}
+
+.hidden-span {
+    position: absolute;
+}
+
+.block-inner {
+    display: flex;
+    flex-direction: column;
+}
+
+.block {
+    display: flex;
+}
+
+.row-inner-1 {
+    width: 100%;
+    display: flex;
+}
+
+.row-inner-2 {
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.add-row, .add-block, .delete-row, .delete-block {
+    padding: 0;
+    border: 0;
+    background-color: #ffffff;
+    border-radius: 0.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1px;
+}
+
+.add-row, .delete-block {
+    height: 1em;
+}
+.add-block, .delete-row {
+    width: 1em;
+}
+
+.add-block, .add-row {
+    border: 1px solid #7fbfff;
+    color: #7fbfff;
+}
+.add-block:hover, .add-row:hover {
+    background-color: #f4f9ff;
+}
+.add-block:active, .add-row:active {
+    background-color: #e0efff;
+}
+
+.delete-block, .delete-row {
+    border: 1px solid #ff7f7f;
+    color: #ff7f7f;
+}
+.delete-block:hover, .delete-row:hover {
+    background-color: #fff4f4;
+}
+.delete-block:active, .delete-row:active {
+    background-color: #ffe0e0;
+}
+
+.add-row {
+    width: 100%;
+}
+
+.header-button, .key-button-container, .capo-button-container, .key-button, .capo-button, .option-container {
+    background-color: #ffffff;
+    border: none;
+    color: #3f3f3f;
+    border-radius: 0.5em;
+    font-size: 0.85em;
+}
+.key-button-container, .capo-button-container, .option-container {
+    border: 2px solid #dfdfdf;
+    font-size: 1em;
+}
+.key-button, .capo-button {
+    height: 100%;
+    width: 3em;
+}
+.header-button:hover, .header-button.is-on, .key-button:hover, .capo-button:hover {
+    background-color: #efefef;
+}
+.header-button:active, .header-button.is-on:active, .key-button:active, .capo-button:active {
+    background-color: #dfdfdf;
+}
+.select-container {
+    position: relative;
+    font-size: 1em;
+}
+.option-container {
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    width: 100%;
+}
+.spead-option {
+    text-align: right;
+}
